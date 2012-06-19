@@ -47,6 +47,15 @@ Sample Code
 </html>
 ```
 
+Option
+----------
++   `url` :
+    Sets the url of the external page.
+    
++   `scrolling` :
+    to set the scrolling attribute of iframe.
+    The default is "no".
+
 License
 ----------
 Copyright &copy; 2012 MiYABiS
