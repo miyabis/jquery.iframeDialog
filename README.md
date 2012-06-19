@@ -1,6 +1,8 @@
 jQuery UI Dialog iframe wrapper Plugin
 ======================
 
+is a wrapper for the dialog to display the external content using an iframe.
+
 Sample Code
 ----------
 
