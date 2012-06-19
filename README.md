@@ -1,7 +1,7 @@
 jQuery UI Dialog iframe wrapper Plugin
 ======================
 
-Sample
+Sample Code
 ----------
 
 ``` html
