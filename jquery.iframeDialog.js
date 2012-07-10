@@ -1,5 +1,5 @@
 /*
- * jQuery UI iframeDialog Plugin v1.0
+ * jQuery UI iframeDialog Plugin v1.1
  * https://github.com/miyabis/jquery.iframeDialog
  *
  * Copyright 2012, MiYABiS
@@ -23,6 +23,9 @@
                     options.close = function () {
                         $(this).remove();
                     };
+                }
+                if (options.id) {
+                    $div.attr("id", options.id);
                 }
                 if (options.scrolling) {
                     $iframe.attr("scrolling", options.scrolling);

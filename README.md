@@ -22,6 +22,7 @@ Sample Code
 			});
 			$('#dialogOpen2').iframeDialog({
 				/* iframeDialog options */
+				id: 'iframeDialogTest',
 				url: 'test.html',
 				scrolling: 'auto',
 				/* jquery UI Dialog options */
@@ -49,6 +50,10 @@ Sample Code
 
 Option
 ----------
++   `id` :
+    to set the id to the div tag of the dialog.
+    id='xxxxx' -> aria-labelledby="ui-dialog-title-xxxxx"
+
 +   `url` :
     Sets the url of the external page.
     
@@ -62,3 +67,7 @@ Copyright &copy; 2012 MiYABiS
 Distributed under the [MIT License][mit].
  
 [MIT]: http://www.opensource.org/licenses/mit-license.php
+
+Revision 1.1
+----------
++   added `id` option.
