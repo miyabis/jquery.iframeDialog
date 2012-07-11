@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery.iframedialog by miyabis</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jquery.iframedialog</h1>
+        <p>jQuery UI Dialog iframe wrapper Plugin</p>
+
+        <p class="view"><a href="https://github.com/miyabis/jquery.iframeDialog">View the Project on GitHub <small>miyabis/jquery.iframeDialog</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/miyabis/jquery.iframeDialog/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/miyabis/jquery.iframeDialog/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/miyabis/jquery.iframeDialog">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jQuery UI Dialog iframe wrapper Plugin</h1>
+
+<p>is a wrapper for the dialog to display the external content using an iframe.</p>
+
+<h2>Sample Code</h2>
+
+<div class="highlight">
+<pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.7.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/ui/1.8.19/jquery-ui.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../jquery.iframeDialog.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'#dialogOpen1'</span><span class="p">).</span><span class="nx">iframeDialog</span><span class="p">({</span>
+                <span class="nx">modal</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">resizable</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span>
+            <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'#dialogOpen2'</span><span class="p">).</span><span class="nx">iframeDialog</span><span class="p">({</span>
+                <span class="cm">/* iframeDialog options */</span>
+                <span class="nx">id</span><span class="o">:</span> <span class="s1">'iframeDialogTest'</span><span class="p">,</span>
+                <span class="nx">url</span><span class="o">:</span> <span class="s1">'test.html'</span><span class="p">,</span>
+                <span class="nx">scrolling</span><span class="o">:</span> <span class="s1">'auto'</span><span class="p">,</span>
+                <span class="cm">/* jquery UI Dialog options */</span>
+                <span class="nx">title</span><span class="o">:</span> <span class="s1">'iframe Dialog'</span><span class="p">,</span>
+                <span class="nx">modal</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">resizable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="nx">buttons</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s1">'close'</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://code.jquery.com/ui/1.8.19/themes/base/jquery-ui.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dialogOpen1"</span> <span class="na">title=</span><span class="s">"iframe Dialog"</span> <span class="na">href=</span><span class="s">"test.html"</span><span class="nt">&gt;</span>Dialog Open 1<span class="nt">&lt;/a&gt;&lt;br/&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dialogOpen2"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Dialog Open 2<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+</div>
+
+
+<h2>Option</h2>
+
+<ul>
+<li><p><code>id</code> :
+to set the id to the div tag of the dialog.
+id='xxxxx' -&gt; aria-labelledby="ui-dialog-title-xxxxx"</p></li>
+<li><p><code>url</code> :
+Sets the url of the external page.</p></li>
+<li><p><code>scrolling</code> :
+to set the scrolling attribute of iframe.
+The default is "no".</p></li>
+</ul><h2>License</h2>
+
+<p>Copyright © 2012 MiYABiS
+Distributed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+
+<h2>Revision 1.1</h2>
+
+<ul>
+<li>  added <code>id</code> option.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/miyabis">miyabis</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33280598-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
