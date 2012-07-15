@@ -17,8 +17,9 @@ Sample Code
 			$('#dialogOpen1').iframeDialog({
 				modal: true,
 				resizable: false,
-				width: 200,
-				height: 200
+				scrolling: 'auto',
+				width: 800,
+				height: 400
 			});
 			$('#dialogOpen2').iframeDialog({
 				/* iframeDialog options */
@@ -42,7 +43,7 @@ Sample Code
 	<link href="http://code.jquery.com/ui/1.8.19/themes/base/jquery-ui.css" rel="stylesheet"/>
 </head>
 <body>
-	<a id="dialogOpen1" title="iframe Dialog" href="test.html">Dialog Open 1</a><br/>
+	<a id="dialogOpen1" title="iframe Dialog" href="http://miyabis.github.com/jquery.iframeDialog/">Dialog Open 1</a>
 	<a id="dialogOpen2" href="#">Dialog Open 2</a>
 </body>
 </html>
