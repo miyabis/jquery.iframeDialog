@@ -69,6 +69,10 @@ Distributed under the [MIT License][mit].
  
 [MIT]: http://www.opensource.org/licenses/mit-license.php
 
+Revision 1.2
+----------
++   url option when there is no change to enable the href.
+
 Revision 1.1
 ----------
 +   added `id` option.
