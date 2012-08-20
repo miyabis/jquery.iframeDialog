@@ -34,8 +34,7 @@
 
 <h2>Sample Code</h2>
 
-<div class="highlight">
-<pre><span class="nt">&lt;html&gt;</span>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.7.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/ui/1.8.19/jquery-ui.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -45,8 +44,9 @@
             <span class="nx">$</span><span class="p">(</span><span class="s1">'#dialogOpen1'</span><span class="p">).</span><span class="nx">iframeDialog</span><span class="p">({</span>
                 <span class="nx">modal</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="nx">resizable</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-                <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span>
+                <span class="nx">scrolling</span><span class="o">:</span> <span class="s1">'auto'</span><span class="p">,</span>
+                <span class="nx">width</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span>
+                <span class="nx">height</span><span class="o">:</span> <span class="mi">400</span>
             <span class="p">});</span>
             <span class="nx">$</span><span class="p">(</span><span class="s1">'#dialogOpen2'</span><span class="p">).</span><span class="nx">iframeDialog</span><span class="p">({</span>
                 <span class="cm">/* iframeDialog options */</span>
@@ -70,13 +70,11 @@
     <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://code.jquery.com/ui/1.8.19/themes/base/jquery-ui.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dialogOpen1"</span> <span class="na">title=</span><span class="s">"iframe Dialog"</span> <span class="na">href=</span><span class="s">"test.html"</span><span class="nt">&gt;</span>Dialog Open 1<span class="nt">&lt;/a&gt;&lt;br/&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dialogOpen1"</span> <span class="na">title=</span><span class="s">"iframe Dialog"</span> <span class="na">href=</span><span class="s">"http://miyabis.github.com/jquery.iframeDialog/"</span><span class="nt">&gt;</span>Dialog Open 1<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dialogOpen2"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Dialog Open 2<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h2>Option</h2>
 
@@ -94,7 +92,11 @@ The default is "no".</p></li>
 <p>Copyright © 2012 MiYABiS
 Distributed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
 
-<h2>Revision 1.1</h2>
+<h2>Revision 1.2</h2>
+
+<ul>
+<li>  url option when there is no change to enable the href.</li>
+</ul><h2>Revision 1.1</h2>
 
 <ul>
 <li>  added <code>id</code> option.</li>
