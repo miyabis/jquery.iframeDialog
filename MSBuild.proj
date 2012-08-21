@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="Upload" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+	<PropertyGroup>
+		<TPathExtensionPack>$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks</TPathExtensionPack>
+	</PropertyGroup>
+
+	<Import Project="$(TPathExtensionPack)"/>
+
+	<PropertyGroup>
+		<NuGetBin>C:\Build\bin\NuGet.exe</NuGetBin>
+		<BinDir>.\</BinDir>
+		<NuGetDirPackages>..\NuGet\Packages\</NuGetDirPackages>
+		<NuGetDirBackup>..\NuGet\Backup\</NuGetDirBackup>
+		<NuGetServer>https://nuget.org</NuGetServer>
+		<NuGetApiKey></NuGetApiKey>
+		<nuspec>jquery.iframeDialog.nuspec</nuspec>
+	</PropertyGroup>
+
+	<Target Name="Upload">
+		<MakeDir Directories="$(NuGetDirPackages)" />
+		<MakeDir Directories="$(NuGetDirBackup)" />
+
+		<Exec WorkingDirectory="$(NuGetDirPackages)"
+				Command="$(NuGetBin) pack ..\..\src\$(nuspec)" />
+
+		<CreateItem Include="$(NuGetDirPackages)*.*">
+			<Output TaskParameter="Include" ItemName="_nupkgs" />
+		</CreateItem>
+
+		<Exec Command="$(NuGetBin) push @(_nupkgs) -s $(NuGetServer) $(NuGetApiKey)" />
+
+		<Move SourceFiles="@(_nupkgs)" DestinationFolder="$(NuGetDirBackup)" />
+
+	</Target>
+
+</Project>
