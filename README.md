@@ -2,6 +2,7 @@ jQuery UI Dialog iframe wrapper Plugin
 ======================
 
 is a wrapper for the dialog to display the external content using an iframe.
+If you want to use with visual studio you can take advantage of NuGet.
 
 Sample Code
 ----------
